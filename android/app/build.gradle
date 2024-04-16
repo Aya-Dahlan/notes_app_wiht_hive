@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.notes_app_with_hive"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
     compileOptions {
@@ -64,8 +64,4 @@ flutter {
     source '../..'
 }
 
-dependencies {
-        classpath "com.android.tools.build:gradle:7.5.1"
-        
-
-}
+dependencies {}
