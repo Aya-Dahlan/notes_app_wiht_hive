@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:notes_app_with_hive/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:notes_app_with_hive/models/note_model.dart';
+import 'package:notes_app_with_hive/views/widgets/colors_list_view.dart';
 import 'package:notes_app_with_hive/views/widgets/custom_button.dart';
 import 'package:notes_app_with_hive/views/widgets/custom_textLfield.dart';
 
@@ -45,9 +46,14 @@ class _AddNoteFormState extends State<AddNoteForm> {
             hint: 'Content',
             maxLines: 5,
           ),
+ const SizedBox(
+            height: 16,
+          ),
+         const  ColorsListView(),
           const SizedBox(
             height: 16,
           ),
+          
           BlocBuilder<AddNotesCubit, AddNotesState>(
             builder: (context, state) {
               return CustomButton(
@@ -55,8 +61,9 @@ class _AddNoteFormState extends State<AddNoteForm> {
                 onTap: () {
                   if (formKey.currentState!.validate()) {
                     formKey.currentState!.save();
-                    var currentDate=DateTime.now();
-                    var formattedCurrentDate= DateFormat("dd-mm-yyyy-EE").format(currentDate);
+                    var currentDate = DateTime.now();
+                    var formattedCurrentDate =
+                        DateFormat("dd-mm-yyyy-EE").format(currentDate);
 
                     NoteModel noteModel = NoteModel(
                         date: formattedCurrentDate,

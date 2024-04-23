@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:notes_app_with_hive/constants.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, required this.hint , this.maxLines=1, this.onSaved});
+  const CustomTextField({super.key, required this.hint , this.maxLines=1, this.onSaved, this.onChanged});
 
   final  String hint;
   final int maxLines;
   final void Function(String?)? onSaved;
+  final void Function(String?)? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class CustomTextField extends StatelessWidget {
      style: TextStyle(color: Colors.white),
     
       onSaved: onSaved,
+      onChanged: onChanged,
       validator: (value){
         if(value?.isEmpty ??true){
           return 'Field is required';
