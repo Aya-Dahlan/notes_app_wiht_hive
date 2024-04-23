@@ -56,7 +56,7 @@ class _AddNoteFormState extends State<AddNoteForm> {
                     formKey.currentState!.save();
 
                     NoteModel noteModel = NoteModel(
-                        Date: DateTime.now().toString(),
+                        date: DateTime.now().toString(),
                         color: Colors.blue.value,
                         subTitle: subTitle!,
                         title: title!);

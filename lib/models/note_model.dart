@@ -7,12 +7,12 @@ class NoteModel extends HiveObject {
   @HiveField(1)
   final String subTitle;
   @HiveField(2)
-  final String Date;
+  final String date;
   @HiveField(3)
   final int color;
 
   NoteModel(
-      {required this.Date,
+      {required this.date,
       required this.color,
       required this.subTitle,
       required this.title});
