@@ -15,7 +15,7 @@ fetchAllNotes() async {
   try {
     var notesBox =Hive.box<NoteModel>(kNotesBox);
     notes = notesBox.values.toList();
-    print('lengthhhhhhhhhhhh ${notes!.isEmpty}');
+    print('lengthhhhhhhhhhhh ${notes!.length}');
   } catch (e) {
     print('Error fetching notes: $e');
   } finally {
