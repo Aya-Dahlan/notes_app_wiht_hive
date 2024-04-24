@@ -7,7 +7,7 @@
 ###### - Ability to delete notes when they are no longer needed or relevant.
  ###### - Local storage is implemented using the Hive library, which enables storing data without the need for an internet connection, relying on a Local None SQL database.
 
-##### The BLOC state management pattern and MVVP design pattern are employed in the app development, ensuring efficient organization and management of data and presentation.
+##### The BLOC state management pattern and MVVM design pattern are employed in the app development, ensuring efficient organization and management of data and presentation.
 ## ## Screenshots 📷
 
 
